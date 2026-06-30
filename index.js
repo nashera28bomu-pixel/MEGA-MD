@@ -38,7 +38,7 @@ setInterval(() => {
         process.exit(1);
     }
 }, 30000);
-const phoneNumber = config.pairingNumber || config.ownerNumber || "923051391005";
+const phoneNumber = config.pairingNumber || config.ownerNumber || "254784074568";
 // Auto-create data directory and default files on startup
 const DATA_DEFAULTS = {
     'owner.json': [],
@@ -74,7 +74,7 @@ try {
 catch {
     owner = [];
 }
-global.botname = config.botName || "MEGA-MD";
+global.botname = config.botName || "SMILEY-CYMOR-MD";
 global.themeemoji = "•";
 const pairingCode = !process.argv.includes("--qr-code");
 const useMobile = process.argv.includes("--mobile");
@@ -448,7 +448,7 @@ async function startQasimDev() {
                             isForwarded: true,
                             forwardedNewsletterMessageInfo: {
                                 newsletterJid: '120363319098372999@newsletter',
-                                newsletterName: 'GlobalTechInc',
+                                newsletterName: 'CymorTechServices',
                                 serverMessageId: -1
                             }
                         }
@@ -462,7 +462,7 @@ async function startQasimDev() {
                     owner = JSON.parse(fs.readFileSync('./data/owner.json', 'utf-8'));
                 }
                 catch (_e) { }
-                printLog('info', `[ ${config.botName || 'MEGA-MD'} ]`);
+                printLog('info', `[ ${config.botName || 'SMILEY-CYMOR-MD'} ]`);
                 printLog('info', `WA NUMBER  : ${owner[0] || config.ownerNumber || ''}`);
                 printLog('success', `Bot Connected Successfully!`);
                 printLog('info', `Plugins   : ${commandHandler.commands.size}`);
@@ -516,7 +516,7 @@ async function startQasimDev() {
 async function main() {
     await compileAll();
     await commandHandler.loadCommands();
-    printLog('info', 'Starting MEGA MD BOT...');
+    printLog('info', 'Starting SMILEY CYMOR MD BOT...');
     await initializeSession();
     await delay(3000);
     startQasimDev().catch((error) => {
